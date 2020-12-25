@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Text Editor</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Text Editor</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/avinash-j1920/ ">About US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://wa.me/7768966023?">Contact US</a>
+              </li>   
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <strong>Welcome to Text Editor!!!!!!!</strong>
+      </div>
+      <form action="/analyze" method="POST"> {% csrf_token %}
+        <div class="mx-auto" style="width:1200px">
+            <label for="exampleFormControlTextarea6">Enter your text here and let Text Editor do the magic : </label>
+            
+            <textarea name = "text" class="form-control z-depth-10" id="exampleFormControlTextarea6" rows="10" ></textarea>
+            <input type="checkbox" class = "mt-2" name = "removepunc">Remove Punctuator <br>
+            <input type="checkbox" class = "mt-2" name = "UPPERCASE">UPPERCASE<br>
+            <input type="checkbox" class = "mt-2" name = "Newlineremover">New line remover<br>
+            <input type="checkbox" class = "mt-2" name = "Spaceremover">Extra Space remover<br>
+            <input type="checkbox" class = "mt-2" name = "Charcount" >Count Character<br>
+            <button type="submit" class="btn btn-success mt-3">Edit Text</button>
+        </div>
+
+      </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
